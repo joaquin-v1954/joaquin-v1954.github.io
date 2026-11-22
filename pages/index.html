@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehabify | Rehabilitación y Ergonomía en Tiempo Real</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/main.js" defer></script>
-  <link rel="icon" href="../favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../favicon.ico">
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
 
-<header class="cabecera">
+  <!-- CABECERA AZUL (Prototipo) -->
+  <header class="cabecera">
     <div class="contenedor barra">
       <a class="marca" href="#inicio">
-      <img src="../assets/images/logo.png" alt="" class="logo" width="36" height="36">
-       Rehabify
+        <img src="../assets/images/logo.png" alt="" class="logo" width="36" height="36">
+        Rehabify
       </a>
+
       <button type="button" id="btn-menu" class="boton-menu" aria-expanded="false" aria-label="Abrir menú">
         &#9776; Menú
       </button>
+
       <nav id="navegacion" aria-label="Navegación principal">
         <ul class="menu">
           <li><a href="#inicio">Inicio</a></li>
@@ -27,7 +30,8 @@
           <li><a href="#fisioterapeutas">Fisioterapeutas</a></li>
           <li><a href="#racha">Racha</a></li>
           <li><a href="#ajustes">Ajustes</a></li>
-          <li><a href="#acceso" class="boton">Iniciar sesión</a></li>
+          <li><a href="#acceso">Iniciar sesión</a></li>
+          <li><a href="#sesion" class="boton-blanco">Probar gratis</a></li>
         </ul>
       </nav>
     </div>
@@ -35,28 +39,66 @@
 
   <main id="main">
 
-    <!-- 1. INICIO / HERO (Wireframe 4.4.1 y 4.4.2 | HU05, HU07) -->
+    <!-- 1. INICIO / HERO (Diseño Figma Rehabify) -->
     <section id="inicio" class="seccion contenedor dos-columnas">
       <div>
-        <p class="etiqueta">Rehabilitación física y ergonomía</p>
-        <h1>Corrige tu postura en tiempo real, sin grabar video.</h1>
-        <p>Rehabify procesa tus ángulos articulares localmente mediante tu cámara web para guiarte en casa o en el teletrabajo y enviar reportes objetivos a tu fisioterapeuta.</p>
+        <span class="pildora">● Visión artificial · Rehabilitación en casa</span>
+
+        <h1 class="titulo-hero">
+          Rehabilitación guiada.<br>
+          <span class="texto-azul">Postura corregida.</span><br>
+          Sin cámaras que te vigilen.
+        </h1>
+
+        <p>
+          Rehabify usa tu cámara web estándar para rastrear articulaciones en tiempo real, corrigiendo posturas al instante y previniendo lesiones crónicas — sin almacenar un solo fotograma de video.
+        </p>
+
         <div class="grupo-botones">
-          <a href="#sesion" class="boton boton-verde">Comenzar sesión gratuita</a>
-          <a href="#acceso" class="boton boton-secundario">Crear cuenta</a>
+          <a href="#sesion" class="boton boton-verde">▶ Comenzar sesión gratuita</a>
+          <a href="#fisioterapeutas" class="boton boton-borde">Ver demo clínica</a>
         </div>
-        <p class="caption">Procesamiento local · Cero grabaciones · Accesible WCAG 2.2</p>
+
+        <div class="metricas-hero">
+          <div>
+            <strong>98.4%</strong>
+            <span class="caption">Precisión postural</span>
+          </div>
+          <div>
+            <strong>±2°</strong>
+            <span class="caption">Error articular</span>
+          </div>
+          <div>
+            <strong>0 MB</strong>
+            <span class="caption">Video almacenado</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Tarjeta visual del Hero (Wireframe derecho) -->
-      <div class="tarjeta-oscura">
-        <p class="etiqueta-clara">SESIÓN EN VIVO · VISTA PREVIA</p>
-        <h2>Flexión de rodilla</h2>
-        <p>Rango seguro prescrito: <strong>130° - 160°</strong></p>
-        <div class="caja-estado">
-          <strong>✓ Postura correcta (142°)</strong> — Rango articular dentro del límite seguro.
+      <!-- Vista previa de seguimiento postural (Lado derecho) -->
+      <div class="marco-camara">
+        <div class="marco-cuerpo">
+          <div class="tarjeta-alerta-ok">
+            <strong class="texto-verde">✓ Postura correcta</strong>
+            <p class="caption">Rodilla izquierda</p>
+            <p class="angulo-grande">142°</p>
+            <div class="barra-fondo">
+              <div class="barra-progreso" style="width: 75%;"></div>
+            </div>
+            <p class="caption">Rango seguro: 130° — 160°</p>
+          </div>
+
+          <div class="tarjeta-reps">
+            <span class="caption">Repeticiones</span>
+            <p class="reps-grande">8 <span>/12</span></p>
+            <span class="caption">Serie 2 de 3</span>
+          </div>
         </div>
-        <p class="caption-clara">Ícono + texto + color verde (accesible para daltonismo).</p>
+
+        <div class="marco-pie">
+          <span>● ANALIZANDO EN VIVO</span>
+          <span>30 fps · local</span>
+        </div>
       </div>
     </section>
 

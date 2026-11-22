@@ -544,7 +544,6 @@ tbody tr:nth-child(odd) {
 }
 
 @media screen and (max-width: 600px) {
-  @media screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
   }
@@ -562,7 +561,7 @@ tbody tr:nth-child(odd) {
   .tres-columnas-mini {
     grid-template-columns: 1fr;
   }
-}
+
   .boton-menu {
     display: inline-block;
     padding: 8px 14px;
