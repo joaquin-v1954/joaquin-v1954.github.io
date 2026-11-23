@@ -95,7 +95,6 @@ document.getElementById('btn-pausar').addEventListener('click', function () {
   kpiEstado.textContent = sesionPausada ? 'Pausado' : 'Activo';
 });
 
-// 3. REGISTRO DE MOLESTIAS (HU19)
 var formMolestia = document.getElementById('form-molestia');
 var nivelMolestia = document.getElementById('nivel-molestia');
 var errMolestia = document.getElementById('err-molestia');
@@ -134,7 +133,7 @@ document.getElementById('form-experiencia').addEventListener('submit', function 
   document.getElementById('status-exp').textContent = '✓ Gracias. Calificación guardada: ' + nota + '/5.';
 });
 
-// 5. PANEL DE FISIOTERAPEUTAS (HU08, HU31, HU32, HU47)
+
 var pacientes = [
   { nombre: 'María González', cumplimiento: '82%', riesgo: 'Bajo', rom: '142°' },
   { nombre: 'Carlos Mendez', cumplimiento: '23%', riesgo: 'Alto', rom: '108°' },
@@ -213,7 +212,6 @@ inputBuscar.addEventListener('input', function () {
 });
 renderizarBiblioteca('');
 
-// 6. ACCESIBILIDAD Y AJUSTES (HU17, HU20, HU24)
 var contrasteActivo = false;
 var textoGrandeActivo = false;
 
@@ -234,7 +232,7 @@ document.getElementById('btn-guardar-ajustes').addEventListener('click', functio
   document.getElementById('status-ajustes').textContent = '✓ Preferencias guardadas. Recordatorio diario a las ' + hora + '.';
 });
 
-// 7. VALIDACIÓN DE ACCESO POR PERFIL (HU33)
+
 var formAcceso = document.getElementById('form-acceso');
 var correoUsuario = document.getElementById('correo-usuario');
 var claveUsuario = document.getElementById('clave-usuario');
