@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajustes y Accesibilidad | Rehabify</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../favicon.ico">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="./index.html">
+        <img src="../assets/images/logo.png" alt="" class="logo" width="36" height="36">
+        Rehabify
+      </a>
+
+      <button type="button" id="btn-menu" class="boton-menu" aria-expanded="false" aria-label="Abrir menú">
+        &#9776; Menú
+      </button>
+
+      <nav id="navegacion" aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="#sesion">Sesión</a></li>
+          <li><a href="./fisioterapeutas.html">Fisioterapeutas</a></li>
+          <li><a href="./ajustes.html">Ajustes</a></li>
+          <li><a href="./index.html#acceso">Iniciar sesión</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="ajustes" class="seccion contenedor">
+      <p class="etiqueta">Preferencias y Accesibilidad</p>
+      <h1>Ajustes de Interfaz, Alertas y Datos</h1>
+
+      <div class="dos-columnas">
+        <div class="tarjeta">
+          <h2>Accesibilidad visual </h2>
+          <p>Adapta el tamaño del texto y el contraste según tus necesidades visuales.</p>
+          <div class="grupo-botones">
+            <button type="button" id="btn-contraste" class="boton">Activar / Desactivar Alto Contraste</button>
+            <button type="button" id="btn-texto-grande" class="boton boton-secundario">Aumentar / Normalizar Texto</button>
+          </div>
+          <p id="status-accesibilidad" role="status" class="caption"></p>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Alertas y Recordatorios </h2>
+          <fieldset>
+            <legend>Preferencias de aviso</legend>
+            <label><input type="checkbox" id="chk-visual" checked> Alertas visuales (color + ícono + texto)</label>
+            <label><input type="checkbox" id="chk-sonora" checked> Alertas sonoras</label>
+          </fieldset>
+          <div class="grupo-input">
+            <label for="hora-recordatorio">Hora de recordatorio diario:</label>
+            <input type="time" id="hora-recordatorio" value="18:30">
+          </div>
+          <button type="button" id="btn-guardar-ajustes" class="boton boton-verde">Guardar preferencias</button>
+          <p id="status-ajustes" role="status" class="caption"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p><strong>Rehabify</strong> · Rehabilitación física y cuidado ergonómico en tiempo real.</p>
+      <p>Sin almacenamiento de video · Cumplimiento WCAG 2.2 · UPC 1ASI0784 (2026-20)</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+</html>

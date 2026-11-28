@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
   <header class="cabecera">
     <div class="contenedor barra">
       <a class="marca" href="#inicio">
@@ -27,11 +26,9 @@
         <ul class="menu">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sesion">Sesión</a></li>
-          <li><a href="#fisioterapeutas">Fisioterapeutas</a></li>
-          <li><a href="#racha">Racha</a></li>
-          <li><a href="#ajustes">Ajustes</a></li>
+          <li><a href="./fisioterapeutas.html">Fisioterapeutas</a></li>
+          <li><a href="./ajustes.html">Ajustes</a></li>
           <li><a href="#acceso">Iniciar sesión</a></li>
-          <li><a href="#sesion" class="boton-blanco">Probar gratis</a></li>
         </ul>
       </nav>
     </div>
@@ -55,7 +52,7 @@
 
         <div class="grupo-botones">
           <a href="#sesion" class="boton boton-verde">▶ Comenzar sesión gratuita</a>
-          <a href="#fisioterapeutas" class="boton boton-borde">Ver demo clínica</a>
+          <a href="./fisioterapeutas.html" class="boton boton-borde">Ver demo clínica</a>
         </div>
 
         <div class="metricas-hero">
@@ -73,7 +70,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="marco-camara">
         <div class="marco-cuerpo">
@@ -111,13 +107,13 @@
           <div class="tarjeta">
             <h3>1. Comprobación previa y privacidad</h3>
             <fieldset>
-              <legend>Seguridad y consentimiento (HU05, HU13, HU48)</legend>
+              <legend>Seguridad y consentimiento </legend>
               <label><input type="checkbox" id="chk-espacio"> Espacio libre, iluminado y superficie estable</label>
               <label><input type="checkbox" id="chk-privacidad"> Autorizo cámara local (no se graba ni almacena video)</label>
             </fieldset>
 
             <div class="grupo-input">
-              <label for="select-rutina">Rutina del día / Pausa activa express (HU10, HU15):</label>
+              <label for="select-rutina">Rutina del día / Pausa activa express :</label>
               <select id="select-rutina">
                 <option value="Flexión de rodilla (3x12)">Rutina: Flexión de rodilla (3 series x 12 reps)</option>
                 <option value="Extensión de cadera (3x10)">Rutina: Extensión de cadera (3 series x 10 reps)</option>
@@ -127,7 +123,7 @@
             </div>
 
             <button type="button" id="btn-validar-inicio" class="boton boton-verde">Validar cámara y postura inicial</button>
-            <button type="button" id="btn-modo-practica" class="boton boton-secundario">Modo práctica (HU27)</button>
+            <button type="button" id="btn-modo-practica" class="boton boton-secundario">Modo práctica </button>
             <p id="estado-previo" class="caja-estado" role="status" style="display: none;"></p>
           </div>
 
@@ -161,7 +157,7 @@
         </div>
 
         <div class="tarjeta" style="margin-top: 24px;">
-          <h3>Registro de molestias durante la rutina (HU19)</h3>
+          <h3>Registro de molestias durante la rutina </h3>
           <form id="form-molestia" class="dos-columnas" novalidate>
             <div class="grupo-input">
               <label for="zona-molestia">Zona corporal:</label>
@@ -192,23 +188,23 @@
 
       <div class="tarjetas">
         <article class="tarjeta">
-          <h3>Racha actual (HU06)</h3>
+          <h3>Racha actual </h3>
           <p class="kpi-grande" id="texto-racha">6 días consecutivos</p>
           <p class="caption">Completa hoy para desbloquear la insignia de 7 días.</p>
           <button type="button" id="btn-sumar-racha" class="boton boton-verde">Completar sesión de hoy</button>
         </article>
 
         <article class="tarjeta">
-          <h3>Meta semanal (HU14)</h3>
+          <h3>Meta semanal </h3>
           <p class="kpi-grande" id="texto-meta">3 de 4 sesiones</p>
           <div class="barra-fondo">
             <div id="barra-meta" class="barra-progreso" style="width: 75%;">75%</div>
           </div>
-          <p class="caption">Recomendación (HU29): Reduce la velocidad en la fase final.</p>
+          <p class="caption">Recomendación : Reduce la velocidad en la fase final.</p>
         </article>
 
         <article class="tarjeta">
-          <h3>Evaluar experiencia (HU21)</h3>
+          <h3>Evaluar experiencia </h3>
           <form id="form-experiencia">
             <label for="calificacion-sesion">Calificación de la sesión (1 a 5):</label>
             <select id="calificacion-sesion">
@@ -224,9 +220,8 @@
         </article>
       </div>
 
-
       <div class="tarjeta" style="margin-top: 24px;">
-        <h3>Historial de sesiones realizadas (HU25)</h3>
+        <h3>Historial de sesiones realizadas </h3>
         <table>
           <thead>
             <tr>
@@ -260,101 +255,10 @@
       </div>
     </section>
 
-    <section id="fisioterapeutas" class="seccion fondo">
-      <div class="contenedor">
-        <p class="etiqueta">Panel Clínico · Especialistas</p>
-        <h2>Gestión de Pacientes, Reportes y Rutinas</h2>
-
-        <div class="tarjeta">
-          <div class="barra-filtros">
-            <label for="filtro-riesgo">Filtrar pacientes por riesgo (HU08):</label>
-            <select id="filtro-riesgo">
-              <option value="Todos">Todos los pacientes</option>
-              <option value="Alto">Riesgo Alto</option>
-              <option value="Medio">Riesgo Medio</option>
-              <option value="Bajo">Riesgo Bajo</option>
-            </select>
-          </div>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Paciente</th>
-                <th>Cumplimiento</th>
-                <th>Nivel de Riesgo</th>
-                <th>Último ROM</th>
-                <th>Acción (HU04 / HU32)</th>
-              </tr>
-            </thead>
-            <tbody id="tabla-pacientes"></tbody>
-          </table>
-          <p id="status-pdf" role="status" class="caption"></p>
-        </div>
-
-        <div class="dos-columnas" style="margin-top: 24px;">
-
-          <div class="tarjeta">
-            <h3>Observaciones clínicas (HU31)</h3>
-            <form id="form-observacion" novalidate>
-              <div class="grupo-input">
-                <label for="texto-obs">Nota privada del fisioterapeuta:</label>
-                <textarea id="texto-obs" rows="3" required aria-describedby="err-obs" placeholder="Ej. Mejora sostenida en flexión..."></textarea>
-                <p id="err-obs" class="mensaje-error"></p>
-              </div>
-              <button type="submit" class="boton">Guardar observación</button>
-              <p id="status-obs" role="status" class="caption"></p>
-            </form>
-          </div>
-
-          <div class="tarjeta">
-            <h3>Biblioteca de ejercicios (HU47)</h3>
-            <div class="grupo-input">
-              <label for="buscar-ejercicio">Buscar por nombre:</label>
-              <input type="text" id="buscar-ejercicio" placeholder="Ej. rodilla, hombro, cadera...">
-            </div>
-            <ul id="lista-biblioteca" class="lista-simple"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="ajustes" class="seccion contenedor">
-      <p class="etiqueta">Preferencias y Accesibilidad</p>
-      <h2>Ajustes de Interfaz, Alertas y Datos</h2>
-
-      <div class="dos-columnas">
-        <div class="tarjeta">
-          <h3>Accesibilidad visual (HU24)</h3>
-          <p>Adapta el tamaño del texto y el contraste según tus necesidades visuales.</p>
-          <div class="grupo-botones">
-            <button type="button" id="btn-contraste" class="boton">Activar / Desactivar Alto Contraste</button>
-            <button type="button" id="btn-texto-grande" class="boton boton-secundario">Aumentar / Normalizar Texto</button>
-          </div>
-          <p id="status-accesibilidad" role="status" class="caption"></p>
-        </div>
-
-        <div class="tarjeta">
-          <h3>Alertas y Recordatorios (HU17, HU20)</h3>
-          <fieldset>
-            <legend>Preferencias de aviso</legend>
-            <label><input type="checkbox" id="chk-visual" checked> Alertas visuales (color + ícono + texto)</label>
-            <label><input type="checkbox" id="chk-sonora" checked> Alertas sonoras</label>
-          </fieldset>
-          <div class="grupo-input">
-            <label for="hora-recordatorio">Hora de recordatorio diario:</label>
-            <input type="time" id="hora-recordatorio" value="18:30">
-          </div>
-          <button type="button" id="btn-guardar-ajustes" class="boton boton-verde">Guardar preferencias</button>
-          <p id="status-ajustes" role="status" class="caption"></p>
-        </div>
-      </div>
-    </section>
-
     <section id="acceso" class="seccion fondo">
       <div class="contenedor">
         <div class="tarjeta-form">
-          <p class="etiqueta">Acceso por perfil (HU33)</p>
+          <p class="etiqueta">Acceso por perfil </p>
           <h2>Crear cuenta o iniciar sesión</h2>
           <form id="form-acceso" novalidate>
             <div class="grupo-input">

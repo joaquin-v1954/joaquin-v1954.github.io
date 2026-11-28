@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Clínico | Rehabify</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../favicon.ico">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="./index.html">
+        <img src="../assets/images/logo.png" alt="" class="logo" width="36" height="36">
+        Rehabify
+      </a>
+
+      <button type="button" id="btn-menu" class="boton-menu" aria-expanded="false" aria-label="Abrir menú">
+        &#9776; Menú
+      </button>
+
+      <nav id="navegacion" aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="#sesion">Sesión</a></li>
+          <li><a href="./fisioterapeutas.html">Fisioterapeutas</a></li>
+          <li><a href="./ajustes.html">Ajustes</a></li>
+          <li><a href="./index.html#acceso">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="fisioterapeutas" class="seccion fondo">
+      <div class="contenedor">
+        <p class="etiqueta">Panel Clínico · Especialistas</p>
+        <h1>Gestión de Pacientes, Reportes y Rutinas</h1>
+
+        <div class="tarjeta">
+          <div class="barra-filtros">
+            <label for="filtro-riesgo">Filtrar pacientes por riesgo :</label>
+            <select id="filtro-riesgo">
+              <option value="Todos">Todos los pacientes</option>
+              <option value="Alto">Riesgo Alto</option>
+              <option value="Medio">Riesgo Medio</option>
+              <option value="Bajo">Riesgo Bajo</option>
+            </select>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Paciente</th>
+                <th>Cumplimiento</th>
+                <th>Nivel de Riesgo</th>
+                <th>Último ROM</th>
+                <th>Acción </th>
+              </tr>
+            </thead>
+            <tbody id="tabla-pacientes"></tbody>
+          </table>
+          <p id="status-pdf" role="status" class="caption"></p>
+        </div>
+
+        <div class="dos-columnas" style="margin-top: 24px;">
+
+          <div class="tarjeta">
+            <h2>Observaciones clínicas </h2>
+            <form id="form-observacion" novalidate>
+              <div class="grupo-input">
+                <label for="texto-obs">Nota privada del fisioterapeuta:</label>
+                <textarea id="texto-obs" rows="3" required aria-describedby="err-obs" placeholder="Ej. Mejora sostenida en flexión..."></textarea>
+                <p id="err-obs" class="mensaje-error"></p>
+              </div>
+              <button type="submit" class="boton">Guardar observación</button>
+              <p id="status-obs" role="status" class="caption"></p>
+            </form>
+          </div>
+
+          <div class="tarjeta">
+            <h2>Biblioteca de ejercicios </h2>
+            <div class="grupo-input">
+              <label for="buscar-ejercicio">Buscar por nombre:</label>
+              <input type="text" id="buscar-ejercicio" placeholder="Ej. rodilla, hombro, cadera...">
+            </div>
+            <ul id="lista-biblioteca" class="lista-simple"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p><strong>Rehabify</strong> · Rehabilitación física y cuidado ergonómico en tiempo real.</p>
+      <p>Sin almacenamiento de video · Cumplimiento WCAG 2.2 · UPC 1ASI0784 (2026-20)</p>
+    </div>
+  </footer>
+
+</body>
+</html>
